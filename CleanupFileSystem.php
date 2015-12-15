@@ -149,8 +149,7 @@ class Project_Backend_CleanupFileSystem extends Curry_Backend
     {
         set_time_limit(0);
         $this->log(__CLASS__.' started execution at: '.date('Y-m-d H:i:s'), Logger::INFO);
-        // TODO: uncomment on live.
-        //$this->prepareTrashPath();
+        $this->prepareTrashPath();
         $this->enqueue($this->wwwPath);
         
         // read queue
